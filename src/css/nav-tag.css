@@ -1,0 +1,47 @@
+nav {
+    width: 100vw;
+    height: 8vh;
+    background-color: rgb(189, 32, 58);
+    color: aliceblue;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+}
+
+.logo {
+    width: 50vw;
+    height: 100%;
+    font-size: xx-large;
+    margin-left: -5vw;
+    display: flex;
+}
+
+.fb {
+    width:  50vw;
+    height: 100%;
+    display: flex;
+}
+
+.fb h1 {
+    width: max-content;
+    height: max-content;
+    margin-top:  -8vh;
+    padding: 2px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.fb h1 i a {
+    color: white;
+    text-decoration: none;
+}
+
+nav:hover {
+    & .logo {
+        margin-left: 5vw;
+    }
+
+    & .fb h1 {
+        margin: auto;
+    }
+}
