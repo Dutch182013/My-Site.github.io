@@ -9,15 +9,20 @@ nav {
 }
 
 .logo {
-    width: 50vw;
+    width: 50%;
     height: 100%;
     font-size: xx-large;
-    margin-left: -5vw;
     display: flex;
 }
 
+.logo i {
+    width: max-content;
+    height: max-content;
+    margin: auto;
+}
+
 .fb {
-    width:  50vw;
+    width:  50%;
     height: 100%;
     display: flex;
 }
@@ -25,7 +30,7 @@ nav {
 .fb h1 {
     width: max-content;
     height: max-content;
-    margin-top:  -8vh;
+    margin: auto;
     padding: 2px;
     border: 2px solid #fff;
     border-radius: 10px;
@@ -34,14 +39,4 @@ nav {
 .fb h1 i a {
     color: white;
     text-decoration: none;
-}
-
-nav:hover {
-    & .logo {
-        margin-left: 5vw;
-    }
-
-    & .fb h1 {
-        margin: auto;
-    }
 }
