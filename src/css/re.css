@@ -1,9 +1,11 @@
 * {
-    margin: 0px;padding: 0;box-sizing: border-box;
+    margin: 0px;padding: 0px;box-sizing: border-box;
 }
 
 body {
     width: 100vw;
     height: 100vh;
     background-color: black;
+    padding: 0 -4px;
+    background: url("../images/profiles/fp1.jpg");
 }
