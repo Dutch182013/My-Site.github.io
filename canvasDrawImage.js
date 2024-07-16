@@ -8,10 +8,10 @@ function tileSize(unitSize) {
     return unitSize * (tile.scale * tile.original)
 }
 
-CANVAS.width = tileSize(18)
-CANVAS.height = tileSize(18)
-const unitSizeX = 4
-const unitSizeY = 3
+CANVAS.width = tileSize(9)
+CANVAS.height = tileSize(9)
+const unitSizeX = 1
+const unitSizeY = 1
 var sizeX = CANVAS.width / unitSizeX
 var sizeY = CANVAS.height / unitSizeY
 class Ctx {
@@ -40,7 +40,7 @@ class PackImage {
             this.y = this.y + 2
         }
         if (this.y >= maxHeight) {
-            this.y = sizeY * -1
+            this.y = sizeY * -7
         }
     }
 }
@@ -49,7 +49,7 @@ var images = []
 const original = {position : {x : 0, y : -1}}
 function createImage(number){
     let group = []
-    let location = {x : 0, y : -1, unitsize : {dow : 1, up : -1}}
+    let location = {x : 0, y : -7, unitsize : {dow : 1, up : -1}}
     let position = {x : location.x, y : location.y}
 
     for (let i = 0; i <= number; i++) {
