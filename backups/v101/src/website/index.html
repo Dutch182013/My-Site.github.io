@@ -18,85 +18,57 @@
 </head>
 
 <body>
-
   <div class="scroll-up-btn">
     <i class="fas fa-angle-up"></i>
   </div>
-
   <nav class="navbar">
     <div class="max-width">
-
-      <div class="logo"><a href="#">เว็บไซต์<span> (ดัช) Dutch.</span></a></div>
-
+      <div class="logo"><a href="https://rajuan.rf.gd/">Du<span>tch.</span></a></div>
       <ul class="menu">
-        <li><a href="index.html" class="menu-btn">หน้าหลัก</a></li>
-        <li><a href="read-more.html" class="menu-btn">เกี่ยวกับฉัน</a></li>
-        <li><a href="#" class="menu-btn">บริการ</a></li>
-        <li><a href="#" class="menu-btn">ความสามารถ</a></li>
-        <li><a href="#" class="menu-btn">ติดต่อ</a></li>
+        <li><a href="index.html" class="menu-btn">Home</a></li>
+        <li><a href="read-more.html" class="menu-btn">About</a></li>
+        <li><a href="#" class="menu-btn">Services</a></li>
+        <li><a href="skills.html" class="menu-btn">Skills</a></li>
+        <li><a href="#" class="menu-btn">Contact</a></li>
       </ul>
-
       <div class="menu-btn">
         <i class="fas fa-bars"></i>
       </div>
-
     </div>
   </nav>
   
   <section class="home" id="home">
     <div class="max-width">
       <div class="home-content">
-
-        <div class="text-1">สวัสดีครับ, ผมชื่อ </div>
-        <div class="text-2">(ดัช) Dutch</div>
-        <div class="text-3">And ผมเป็น <span class="typing"></span></div>
+        <div class="text-1">Hello, My name is</div>
+        <div class="text-2">Dutch</div>
+        <div class="text-3">And I'm a <span class="typing"></span></div>
         <a href="#">Hire me</a>
-
       </div>
     </div>
   </section>
 
   <section class="about" id="about">
     <div class="max-width">
-
-      <h2 class="title">เกี่ยวกับ ผม</h2>
-
+      <h2 class="title">About me</h2>
       <div class="about-content">
-
         <div class="column left">
-          <img src="images/profile.jpg" width="140" height="140" style="border-radius: 100%;">
+          <img src="images/dutch.png" width="150" height="150" style="
+            border-radius: 100%;">
         </div>
-
         <div class="column right">
           <div class="text">I'm Dutch and I'm a <span class="typing-2"></span></div>
-          <div id="draw-img-file"></div>
+          <p>Hi</p>
           <a href="read-more.html">Read More</a>
         </div>
-
-        <script>
-          let file_img = (fileName, leigthNumber) => {
-            return `
-            <img src="images/Pictures/p${leigthNumber}.jpg" width="${window.innerWidth / 5}" height="${window.innerWidth / 5}" style="border-radius: 100%;">
-            `;
-          }
-          img_output = ""
-          imgnumber = 9;
-          for (let i = 0; i < imgnumber; i++) {
-            img_output += file_img("p", i)
-          }
-          let document_img_file = document.getElementById(`draw-img-file`);
-          document_img_file.innerHTML = img_output;
-        </script>
-
       </div>
-
     </div>
   </section>
   
   <!-- contact section start -->
   <section class="contact" id="contact">
     <div class="max-width">
-      <h2 class="title">ติดต่อ ผมได้ที่</h2>
+      <h2 class="title">Contact me</h2>
       <div class="contact-content">
         <div class="column left">
           <div class="text">...</p>
@@ -104,48 +76,29 @@
             <div class="row">
               <i class="fas fa-user"></i>
               <div class="info">
-                <div class="head"><b>ชื่อเล่น</b> : ดัช, Dutch</div>
-                <div class="head"><b>ชื่อจริง</b> : ชานนท์, Chanon</div>
+                <div class="head">Name Dutch</div>
                 <div class="sub-title"> </div>
               </div>
-              <br>
             </div>
             <div class="row">
               <i class="fas fa-envelope"></i>
               <div class="info">
                 <div class="head">Email</div>
-                <div class="sub-title">อีเมลล์ สำหรับติดต่อยังไม่พร้อม</div>
+                <div class="sub-title">...</div>
               </div>
             </div>
             <div class="row">
               <i class="fab fa-whatsapp"></i>
               <div class="info">
-
-                <div class="head">
-                  <a
-                  style="color:#fff;background-color: #04de28;padding: 0.5rem;border-radius: 10px;"
-                  href="https://line.me/R/ti/g/05xtCWMgl2">
-                    Line
-                  </a>
-                  <b> : ผู้ติดต่อผ่านเว็บไชค์</b>
+                <div class="head"><a style="color:#04de28" href="#">WhatsApp</a>
                 </div>
-
               </div>
             </div>
             <div class="row">
-
               <i class="fab fa-facebook"></i>
               <div class="info">
-                <div class="head">
-                  <a
-                  style="color:#fff;background-color: #087df2;"
-                  href="https://m.facebook.com/dachcpuy.ace/">
-                    Facebook
-                  </a>
-                  <b> : Dutch cpuy</b>
-                </div>
+                <div class="head"><a style="color:#087df2" href="#">Facebook</a> Dutch cpuy</div>
               </div>
-
             </div>
             <div class="row">
               <i class="fab fa-patreon"></i>
@@ -158,8 +111,6 @@
 
       </div>
     </div>
-    <br>
-    <a href="https://rajuan.rf.gd" style="text-decoration: none;"><b>เครดิต : https://rajuan.rf.gd</b></a>
   </section>
   
   <footer>
