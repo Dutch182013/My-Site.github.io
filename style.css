@@ -11,8 +11,10 @@
   color: #fff;
 }
 
-html {
+html ,body {
   scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* custom scroll bar */

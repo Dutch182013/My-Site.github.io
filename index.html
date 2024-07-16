@@ -26,7 +26,7 @@
   <nav class="navbar">
     <div class="max-width">
 
-      <div class="logo"><a href="#">เว็บไซต์<span> (ดัช) Dutch.</span></a></div>
+      <div class="logo"><a href="#">เว็บไซต์<span> Dutch (ดัข) </span></a></div>
 
       <ul class="menu">
         <li><a href="index.html" class="menu-btn">หน้าหลัก</a></li>
@@ -64,29 +64,18 @@
       <div class="about-content">
 
         <div class="column left">
-          <img src="images/profile.jpg" width="140" height="140" style="border-radius: 100%;">
+          <img src="images/profile.jpg" width="140" height="140" style="border-radius: 100%;border: 10px solid #333;">
         </div>
 
         <div class="column right">
           <div class="text">I'm Dutch and I'm a <span class="typing-2"></span></div>
-          <div id="draw-img-file"></div>
-          <a href="read-more.html">Read More</a>
+          <!-- div id="draw-img-file"></div -->
+          <!-- script src="packImages.js"></script -->
+          <canvas style="border: 4px solid #333; border-radius: 5px;" id="cv-draw-img"></canvas>
+          <script src="canvasDrawImage.js"></script>
+          <br>
+          <center><a href="read-more.html">Read More</a></center>
         </div>
-
-        <script>
-          let file_img = (fileName, leigthNumber) => {
-            return `
-            <img src="images/Pictures/p${leigthNumber}.jpg" width="${window.innerWidth / 5}" height="${window.innerWidth / 5}" style="border-radius: 100%;">
-            `;
-          }
-          img_output = ""
-          imgnumber = 9;
-          for (let i = 0; i < imgnumber; i++) {
-            img_output += file_img("p", i)
-          }
-          let document_img_file = document.getElementById(`draw-img-file`);
-          document_img_file.innerHTML = img_output;
-        </script>
 
       </div>
 
