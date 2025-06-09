@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosfat Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <section class="getvariables">
+                <div>
+                    <h1>parameters.</h1>
+                    <input id="getID" class="parameters" type="text" placeholder="Enter ID">
+                    <input id="getIDon" class="parameters" type="text" placeholder="Enter IDon">
+                    <input id="getVGSon" class="parameters" type="text" placeholder="Enter VGSon">
+                    <input id="getVGSth" class="parameters" type="text" placeholder="Enter VGSth">
+                    <center><button id="calculateButton" class="parameters">Calculate</button></center>
+                </div>
+                <div>
+                    <h2>Results: VGS = √(ID/k) + VGSth</h2>
+                    <p class="result" id="result">Please enter values and click calculate.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
