@@ -35,14 +35,14 @@ $(document).ready(function() {
 
   // typing text animation script
   var typed = new Typed(".typing", {
-    strings: ["WebDevelop", "พ่อค้าและลูกค้าในธุระกิจพระเครื่อง", "Software and hardware engineer"],
+    strings: ["WebDevelop", "electronic repair technician"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["WebDevelop : html", "WebDevelop : css", "WebDevelop : js"],
+    strings: ["WebDevelop : html", "css", "js", "python"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
@@ -71,3 +71,4 @@ $(document).ready(function() {
     }
   });
 });
+
