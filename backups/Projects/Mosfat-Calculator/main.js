@@ -16,15 +16,19 @@ getCalculateButton.addEventListener('click', function() {
     let VGSon = Number(get_Value(getVGSon));
     let VGSth = Number(get_Value(getVGSth));
     console.log(`ID: ${ID}, IDon: ${IDon}, VGSon: ${VGSon}, VGSth: ${VGSth}`);
+    let output;
+    if (ID && IDon && VGSon && VGSth) {
+        let k = IDon / ((VGSon - VGSth) ** 2);
+        console.log(`Calculated k: ${k}`);
+        output = `Calculated k: ${k.toFixed(2)}`;
 
-    let k = IDon / ((VGSon - VGSth) ** 2);
-    console.log(`Calculated k: ${k}`);
-    output = `Calculated k: ${k.toFixed(2)}`;
-
-    let VGS = Math.sqrt(ID / k) + VGSth;
-    console.log(`Calculated VGS: ${VGS}`);
-    output += `<br> VGS: ${VGS.toFixed(2)}`;
-
+        let VGS = Math.sqrt(ID / k) + VGSth;
+        console.log(`Calculated VGS: ${VGS}`);
+        output += `<br> VGS: ${VGS.toFixed(2)}`;
+    }
+    else {
+        console.error('One or more inputs are invalid');
+        output = 'Please enter valid numbers for all fields.';
+    }
     getResult.innerHTML = output;
-    console.log(`<p>Result displayed: ${output}</p>`);
 });
