@@ -252,7 +252,7 @@ section .title::after {
 
 /* about section styling */
 .about .title::after {
-  content: "Who Am I";
+  content: "Dutch Chanon";
 }
 
 .about .about-content .left {
@@ -468,9 +468,6 @@ section .title::after {
 }
 
 /* teams section styling */
-.teams .title::after {
-  content: "Who With Me";
-}
 
 .teams .carousel .card {
   background: #222;

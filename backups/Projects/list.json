@@ -4,5 +4,11 @@
     "description": "",
     "url": "Mosfat-Calculator",
     "technologies": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "name": "PC on Android",
+    "description": "",
+    "url": "PC-ON-ANDROID",
+    "technologies": ["HTML", "CSS", "JavaScript"]
   }
 ]
