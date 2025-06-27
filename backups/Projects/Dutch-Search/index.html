@@ -39,35 +39,56 @@
         <div class="max-width">
             <div class="home-content">
                 <div class="text-2">Search</div>
-                <div class="text-3">
-                    <input type="text" id="search-input" placeholder="Search for projects...">
+                <div class="text-2" style="display: flex;">
+                    <input type="text" id="search-input" placeholder="Search For Google">
                     <button id="search-button"><i class="fas fa-search"></i></button>
                     <style>
                         #search-input {
-                            width: 300px;
+                            width: 70vw;
                             padding: 10px;
                             border: 1px solid #ccc;
                             border-radius: 5px;
                         }
                         #search-button {
+                            width: 15vw;
                             padding: 10px;
                             background-color: #007bff;
                             color: white;
                             border: none;
                             border-radius: 5px;
                             cursor: pointer;
+                            margin-left: .5rem;
                         }
                         #search-button:hover {
                             background-color: #0056b3;
                         }
                     </style>
                     <script>
-                        document.getElementById('search-button').addEventListener('click', function() {
-                            const query = document.getElementById('search-input').value.toLowerCase();
-                            if (query) {
-                                window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`);
+                        document.getElementById('search-input').addEventListener('keyup', function(event) {
+                            if (event.key === 'Enter') {
+                                let query = this.value.trim();
+                                if (query) {
+                                    window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                                }
                             }
                         });
+                        document.getElementById('search-button').addEventListener('click', function() {
+                            let query = document.getElementById('search-input').value.trim();
+                            if (query) {
+                                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                            }
+                        });
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add your search functionality here -->
+                            }
+                        });
+
                     </script>
                 </div>
             </div>
