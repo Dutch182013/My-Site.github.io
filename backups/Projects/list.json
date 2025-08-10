@@ -16,5 +16,11 @@
     "description": "",
     "url": "Dutch-Search",
     "technologies": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "name": "Paticle Simulator",
+    "description": "",
+    "url": "particle-simulator",
+    "technologies": ["HTML", "CSS", "JavaScript"]
   }
 ]
