@@ -558,7 +558,8 @@ section .title::after {
 }
 
 .contact .contact-content .left .icons {
-  margin: 10px 0;
+  margin-top: 15px;
+  height: fit-content;
 }
 
 .contact .contact-content .row {

@@ -21,46 +21,36 @@
 
   <nav class="navbar">
     <div class="max-width">
-
       <div class="logo"><a href="#">เว็บไซต์<span> Dutch (ดัช) </span></a></div>
-
       <ul class="menu">
         <li><a href="index.html" class="menu-btn">หน้าหลัก</a></li>
         <li><a href="read-more.html" class="menu-btn">เกี่ยวกับ</a></li>
         <li><a href="backups/Projects/index.html" class="menu-btn">โปรเจ็ค</a></li>
       </ul>
-
       <div class="menu-btn">
         <i class="fas fa-bars"></i>
       </div>
-
     </div>
   </nav>
-  
+
   <section class="home" id="home">
     <div class="max-width">
       <div class="home-content">
-
         <div class="text-1">สวัสดีครับ, ผมชื่อ </div>
         <div class="text-2">(ดัช) Dutch</div>
         <div class="text-3">And ผมเป็น <span class="typing"></span></div>
         <a href="#">Hire me</a>
-
       </div>
     </div>
   </section>
 
   <section class="about" id="about">
     <div class="max-width">
-
       <h2 class="title">เกี่ยวกับ ผม</h2>
-
       <div class="about-content">
-
         <div class="column left">
           <img src="images/profile.jpg" width="140" height="140" style="border-radius: 100%;border: 10px solid #333;">
         </div>
-
         <div class="column right">
           <div class="text">I'm Dutch and I'm a <span class="typing-2"></span></div>
           <!-- div id="draw-img-file"></div -->
@@ -68,12 +58,10 @@
           <br>
           <center><a href="read-more.html">Read More</a></center>
         </div>
-
       </div>
-
     </div>
   </section>
-  
+
   <!-- contact section start -->
   <section class="contact" id="contact">
     <div class="max-width">
@@ -81,67 +69,81 @@
       <div class="contact-content">
         <div class="column left">
           <div class="text">...</p>
+
           <div class="icons">
             <div class="row">
               <i class="fas fa-user"></i>
               <div class="info">
-                <div class="head"><b>ชื่อเล่น</b> : ดัช, Dutch</div>
-                <div class="head"><b>ชื่อจริง</b> : ชานนท์, Chanon</div>
+                <div class="head"><b>ชื่อ</b> : ชานนท์ อาจใจ</div>
+                <div class="head"><b>อายุ</b> : 20ปี</div>
                 <div class="sub-title"> </div>
               </div>
               <br>
             </div>
+          </div>
+
+          <div class="icons">
             <div class="row">
-              <i class="fab fa-whatsapp"></i>
-              <div class="info">
-
-                <div class="head">
-                  <a
-                  style="color:#fff;background-color: #04de28;padding: 0.5rem;border-radius: 10px;"
-                  href="https://line.me/R/ti/g/05xtCWMgl2">
-                    Line
-                  </a>
-                  <b> : ผู้ติดต่อผ่านเว็บไชค์</b>
-                </div>
-
-              </div>
-            </div>
-            <div class="row">
-
               <i class="fab fa-facebook"></i>
               <div class="info">
-                <div class="head">
-                  <a
-                  style="color:#fff;background-color: #087df2;padding: 0.5rem;border-radius: 10px"
-                  href="web.facebook.com/DutchChanon">
-                    Facebook
-                  </a>
-                  <b> : Dutch Chanon </b>
-                </div>
-              </div>
-
-            </div>
-            <div class="row">
-              <i class="fab fa-patreon"></i>
-              <div class="info">
-                <div class="head"><a style="color:#000" href="#">Patreon</a></div>
+                <div class="head"><a style="color:#000" href="https://web.facebook.com/DutchChanon"><h5><b style="background-color: #0866ff; color: white; border-radius: 15px; padding: 0.5rem;">Facebook</b> Dutch Chanon</h5></a></div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
-    <br>
-    <a href="https://rajuan.rf.gd" style="text-decoration: none;"><b>เครดิต : https://rajuan.rf.gd</b></a>
   </section>
-  
+
+  <section class="about" id="about">
+
+    <div class="max-width">
+      <h2 class="title">โปรเจ็ค</h2>
+      <div class="about-content">
+        <div class="right">
+          <div id="project_configs">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="backups/Projects/config_projects.js"></script>
+    <script>
+      const config_projects = new Project_Config();
+      config_projects.load_list('list.json', 'backups/Projects/');
+    </script>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="max-width">
+      <h2 class="title">สนับสนุน</h2>
+      <div class="contact-content">
+        <div class="column">
+          <div style="width: 100%; background-color: #333; color: #fff; padding: 1rem;">
+            <center>
+              <h3>สนับสนุนผมได้ที่</h3>
+              <a href="https://www.buymeacoffee.com/dutchcpuy"><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/BAAC_Logo.svg" alt="Buy Me A Coffee" style="height: 80px !important;width: 217px !important;" ></a>
+              <h2>BAAC (ธกส.)</h2>
+              <h2>เลขบัญชี : 020239539534</h2>
+              <h2>ชื่อบัญชี : ชานนท์ อาจใจ</h2>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <span>Copyright © <script>
         document.write(new Date().getFullYear());
       </script> All rights reserved By <i class="fa fa-heart"></i> <a href="https://m.facebook.com/dark.r34">Dutch</a></p>
   </footer>
+  <script src="backups/Projects/project_config.js"></script>
   <script src="script.js"></script>
+  <script>
+    let config_project = new Project_Config();
+    config_project.load_list('backups/Projects', 'project_data.json');
+  </script>
 </body>
 
 </html>

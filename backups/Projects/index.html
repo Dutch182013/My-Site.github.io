@@ -48,7 +48,7 @@
     </div>
   </section>
 
-  <section class="about" id="about">
+  <!-- <section class="about" id="about">
     <div class="max-width">
 
       <h2 class="title">โปรเจ็ค</h2>
@@ -59,6 +59,25 @@
           </div>
         </div>
         <script src="project_config.js"></script>
+      </div>
+
+    </div>
+  </section> -->
+  <section class="about" id="about">
+    <div class="max-width">
+
+      <h2 class="title">โปรเจ็ค</h2>
+
+      <div class="about-content">
+        <div class="right">
+          <div id="project_configs">
+          </div>
+        </div>
+        <script src="config_projects.js"></script>
+        <script>
+          const config_projects = new Project_Config();
+          config_projects.load_list('list.json', '');
+        </script>
       </div>
 
     </div>
