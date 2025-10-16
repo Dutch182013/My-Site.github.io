@@ -834,3 +834,34 @@ footer span a:hover {
     line-height: 38px;
   }
 }
+
+.support {
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+}
+
+.support img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.support img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.support p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.logo .logo5 {
+  position: absolute;
+  top: 150px;
+  left: 35%;
+}
+.logo .logo6 {
+  position: absolute;
+  top: 150px;
+  left: 55%;
+}
+
