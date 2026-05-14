@@ -7,6 +7,9 @@
   text-decoration: none;
 }
 
+.body, html {
+  background: #fff;
+}
 .card {
   color: #fff;
 }
@@ -39,7 +42,6 @@ section {
 
 .max-width {
   max-width: 1300px;
-  padding: 0 80px;
   margin: auto;
 }
 
@@ -194,6 +196,7 @@ section .title::after {
 /* home section styling */
 .home {
   display: flex;
+  flex-direction: column;
   background: url("images/banner.jpg") no-repeat center;
   height: 100vh;
   color: #fff;
@@ -205,7 +208,7 @@ section .title::after {
 
 .home .max-width {
   width: 100%;
-  display: flex;
+  display: block;
 }
 
 .home .max-width .row {
