@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Dutch Cpuy - website</title>
@@ -15,8 +16,9 @@
   <link rel="icon" href="images/icon.png" type="image/x-icon">
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
 </head>
+
 <body>
-    <nav class="navbar">
+  <nav class="navbar">
     <div class="max-width">
       <div class="logo"><a href="#">สนับสนุน<span> เว็บไซต์ </span></a></div>
       <ul class="menu">
@@ -32,20 +34,23 @@
   <section class="home" id="home">
     <div class="support logo logo5" onclick="">
       <img src="support/034.png" style="border-radius: 15%;" alt="" width="200" height="200">
-      <p id="baac_drop">ธกส</p>
+      <p id="baac_drop"
+        style="background-color: rgba(8, 102, 255, 0.8); color: white; border-radius: 15px; padding: 0.5rem;">ธกส</p>
     </div>
     <div class="support logo logo6" onclick="">
       <img src="support/006.png" style="border-radius: 15%;" alt="" width="200" height="200">
-      <p id="ktb_drop">กรุงไทย</p>
+      <p id="ktb_drop"
+        style="background-color: rgba(8, 102, 255, 0.8); color: white; border-radius: 15px; padding: 0.5rem;">กรุงไทย
+      </p>
     </div>
     <script>
-      document.querySelector('.logo5').addEventListener('click', function() {
+      document.querySelector('.logo5').addEventListener('click', function () {
         document.getElementById('baac_drop').innerHTML = `
         <p>เลขที่บัญชี: 020239539534</p>
         <p>ชื่อบัญชี: นาย ชานนท์ อาจใจ</p>
         <p>ธนาคาร: ธกส (BAAC)</p>`;
       });
-      document.querySelector('.logo6').addEventListener('click', function() {
+      document.querySelector('.logo6').addEventListener('click', function () {
         document.getElementById('ktb_drop').innerHTML = `
         <p>เลขที่บัญชี: 6650206482</p>
         <p>ชื่อบัญชี: นาย ชานนท์ อาจใจ</p>
@@ -54,7 +59,8 @@
     </script>
   </section>
   <footer>
-    <span>Copyright © <script>
+    <span>Copyright ©
+      <script>
         document.write(new Date().getFullYear());
       </script> All rights reserved By <i class="fa fa-heart"></i> <a href="#">Dutch</a></p>
   </footer>
@@ -65,4 +71,5 @@
     config_project.load_list('backups/Projects', 'project_data.json');
   </script>
 </body>
+
 </html>
