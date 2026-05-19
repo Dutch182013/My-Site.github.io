@@ -31,13 +31,9 @@ html {
   background: #888;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 /* all similar content styling codes */
 section {
-  padding: 100px 0;
+  padding: 100px;
 }
 
 .max-width {
@@ -95,6 +91,7 @@ section .title::after {
   background: #fff;
   transform: translateX(-50%);
 }
+
 
 /* navbar styling */
 .navbar {
@@ -211,12 +208,10 @@ section .title::after {
   display: block;
 }
 
-.home .max-width .row {
-  margin-right: 0;
-}
+
 
 .home .home-content .text-1 {
-  font-size: 27px;
+  font-size: 20px;
 }
 
 .home .home-content .text-2 {

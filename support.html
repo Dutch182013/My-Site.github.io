@@ -31,22 +31,9 @@
       </div>
     </div>
   </nav>
+  <div class="home" id="support_draw">
 
-  <body id="support_draw" class="home">
-  </body>
-
-
-  <!-- <div class="support logo logo5" onclick="">
-      <img src="support/034.png" style="border-radius: 15%;" alt="" width="200" height="200">
-      <p id="baac_drop"
-        style="background-color: rgba(8, 102, 255, 0.8); color: white; border-radius: 15px; padding: 0.5rem;">ธกส</p>
-    </div>
-    <div class="support logo logo6" onclick="">
-      <img src="support/006.png" style="border-radius: 15%;" alt="" width="200" height="200">
-      <p id="ktb_drop"
-        style="background-color: rgba(8, 102, 255, 0.8); color: white; border-radius: 15px; padding: 0.5rem;">กรุงไทย
-      </p>
-    </div> -->
+  </div>
   <script>
     class Draw_Support {
       constructor() {
@@ -78,18 +65,7 @@
         this.supports.forEach(support => {
           const supportDiv = document.createElement('div');
           supportDiv.classList.add('support', 'logo');
-          supportDiv.innerHTML = `
-            <section class="home" id="home"> <div class="max-width">
-              <img src="${support.image}" style="border-radius: 15%;" alt="${support.name}" width="200" height="200">
-              <p style="background-color: rgba(8, 102, 255, 0.8); color: white; border-radius: 15px; padding: 0.5rem;">
-                ${support.name}
-                <br>
-                เลขที่บัญชี: ${support.account_number}
-                <br>
-                ชื่อบัญชี: ${support.account_name}
-              </p>
-            </div></section>
-          `;
+          supportDiv.innerHTML = `<section class="about" id="home"> <div class="max-width"><img src="${support.image}" style="border-radius: 15%;" alt="${support.name}" width="200" height="200"><p style="background-color: rgba(8, 102, 255, 0.8); color: white; border-radius: 15px; padding: 0.5rem;">${support.name}<br>เลขที่บัญชี: ${support.account_number}<br>ชื่อบัญชี: ${support.account_name}</p></div></section>`;
           container.appendChild(supportDiv);
         });
       }
