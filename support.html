@@ -65,7 +65,7 @@
         this.supports.forEach(support => {
           const supportDiv = document.createElement('div');
           supportDiv.classList.add('support', 'logo');
-          supportDiv.innerHTML = `<section class="about" id="home"> <div class="max-width"><img src="${support.image}" style="border-radius: 15%;" alt="${support.name}" width="200" height="200"><p style="background-color: rgba(8, 102, 255, 0.8); color: white; border-radius: 15px; padding: 0.5rem;">${support.name}<br>เลขที่บัญชี: ${support.account_number}<br>ชื่อบัญชี: ${support.account_name}</p></div></section>`;
+          supportDiv.innerHTML = `<section class="about" id="home"> <div class="max-width"><img src="${support.image}" style="width: 90%;height: 90%; border-radius: 15%;" alt="${support.name}" width="200" height="200"><p style="background-color: rgba(8, 102, 255, 0.8); color: white; border-radius: 15px; padding: 0.5rem;">${support.name}<br>เลขที่บัญชี: ${support.account_number}<br>ชื่อบัญชี: ${support.account_name}</p></div></section>`;
           container.appendChild(supportDiv);
         });
       }
@@ -99,6 +99,7 @@
     let config_project = new Project_Config();
     config_project.load_list('backups/Projects', 'project_data.json');
   </script>
+  <script src="script.js"></script>
 </body>
 
 </html>

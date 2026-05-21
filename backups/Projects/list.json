@@ -22,5 +22,11 @@
     "description": "",
     "url": "particle-simulator",
     "technologies": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "name": "My Posts",
+    "description": "",
+    "url": "My-Posts",
+    "technologies": ["HTML", "CSS", "JavaScript"]
   }
 ]

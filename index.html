@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Dutch & MySite</title>
+  <title>Dutch Chanon</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -36,13 +36,18 @@
 
   <section class="home" id="home">
     <div class="max-width">
-      <div class="home-content" style="display: block;">
-        <center>
-          <img src="images/profile.jpg" alt="hi" width="200" height="200"
-            style="border-radius: 50%; border: 2px solid #0866ff;">
-        </center>
-        <div class="text-2"> Chanon </div>
+      <div class="home-content">
+        <div class="profile" style="object-fit: cover; object-position: center;">
+          <img src="images/profile.jpg" alt="hi" width="200" height="200" style="border-radius: 50%;">
+        </div>
+        <div class="text-2">Dutch</div>
+        <div class="text-3">
+          Chanon Artchai
+        </div>
         <a href="support.html" style="color: #f3f5f8; font-weight: 500;"><b>สนับสนุน</b></a>
+        <div class="text-3">
+          <span class="typing"></span>
+        </div>
       </div>
   </section>
 
@@ -64,18 +69,12 @@
     </script>
   </section>
 
-  <footer>
-    <span>Copyright ©
-      <script>
-        document.write(new Date().getFullYear());
-      </script> All rights reserved By <i class="fa fa-heart"></i> <a href="#">Dutch</a></p>
-  </footer>
-  <script src="backups/Projects/project_config.js"></script>
-  <script src="script.js"></script>
   <script>
     let config_project = new Project_Config();
     config_project.load_list('backups/Projects', 'project_data.json');
   </script>
+  <script src="backups/Projects/project_config.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

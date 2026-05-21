@@ -7,9 +7,11 @@
   text-decoration: none;
 }
 
-.body, html {
+.body,
+html {
   background: #fff;
 }
+
 .card {
   color: #fff;
 }
@@ -38,7 +40,7 @@ section {
 
 .max-width {
   max-width: 1300px;
-  margin: auto;
+  padding: 0 2rem;
 }
 
 .about,
@@ -210,12 +212,20 @@ section .title::after {
 
 
 
+.home .home-content .name {
+  max-width: fit-content;
+  max-height: fit-content;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .home .home-content .text-1 {
   font-size: 20px;
 }
 
 .home .home-content .text-2 {
-  font-size: 75px;
+  font-size: 1rem;
   font-weight: 600;
   margin-left: -3px;
 }
@@ -682,6 +692,7 @@ footer span a:hover {
 @media (max-width: 991px) {
   .max-width {
     padding: 0 50px;
+    margin: auto;
   }
 }
 
@@ -844,23 +855,26 @@ footer span a:hover {
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
+
 .support img:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .support p {
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
 }
+
 .logo .logo5 {
   position: absolute;
   top: 150px;
   left: 35%;
 }
+
 .logo .logo6 {
   position: absolute;
   top: 150px;
   left: 55%;
 }
-

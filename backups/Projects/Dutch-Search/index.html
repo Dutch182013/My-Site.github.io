@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="canonical" href="https://rajuan.rf.gd">
     <link rel="alternate" hreflang="en" href="https://rajuan.rf.gd">
     <link rel="icon" href="../../../images/icon.png" type="image/x-icon">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
 </head>
+
 <body>
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
@@ -49,6 +52,7 @@
                             border: 1px solid #ccc;
                             border-radius: 5px;
                         }
+
                         #search-button {
                             width: 15vw;
                             padding: 10px;
@@ -59,12 +63,13 @@
                             cursor: pointer;
                             margin-left: .5rem;
                         }
+
                         #search-button:hover {
                             background-color: #0056b3;
                         }
                     </style>
                     <script>
-                        document.getElementById('search-input').addEventListener('keyup', function(event) {
+                        document.getElementById('search-input').addEventListener('keyup', function (event) {
                             if (event.key === 'Enter') {
                                 let query = this.value.trim();
                                 if (query) {
@@ -72,7 +77,7 @@
                                 }
                             }
                         });
-                        document.getElementById('search-button').addEventListener('click', function() {
+                        document.getElementById('search-button').addEventListener('click', function () {
                             let query = document.getElementById('search-input').value.trim();
                             if (query) {
                                 window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
@@ -84,17 +89,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Add your search functionality here -->
-                            }
-                        });
-
-                    </script>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Add your search functionality here -->
+    <script src="../../../script.js"></script>
 </body>
+
 </html>
