@@ -10,6 +10,8 @@
 .body,
 html {
   background: #fff;
+  padding: 0;
+  margin: 0;
 }
 
 .card {
@@ -40,7 +42,7 @@ section {
 
 .max-width {
   max-width: 1300px;
-  padding: 0 2rem;
+  margin: auto;
 }
 
 .about,
@@ -221,7 +223,7 @@ section .title::after {
 }
 
 .home .home-content .text-1 {
-  font-size: 20px;
+  font-size: 0.5rem;
 }
 
 .home .home-content .text-2 {
@@ -231,7 +233,7 @@ section .title::after {
 }
 
 .home .home-content .text-3 {
-  font-size: 40px;
+  font-size: 1.5rem;
   margin: 5px 0;
 }
 

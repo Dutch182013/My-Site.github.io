@@ -1,50 +1,33 @@
-
-async function api_drive(url = "https://script.google.com/macros/s/AKfycbxJZbr9ZasslW2vEUw6-WBzWoMse-r25vEYaRF-dT4PjWDmxC55HsSL6kmPiLs6MoBQ/exec") {
-  let output
-  await fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      output = data;
-    })
-    .catch(error => {
-      console.error("Error fetching data:", error);
-    });
-  return output
-}
-
-
-function onclick_set(url) {
-  window.open(url)
-}
-
-class Post {
-  constructor() {
-    this.posts = []
-    this.draw = document.getElementById("draw-posts")
-  }
-  async createPost(dive = api_drive()) {
-    let output = "";
-    let group = [];
-    for (let data = 0; data < (await dive).length; data++) {
-      group.push({
-        "name": (await dive)[data].name,
-        "link": (await dive)[data].directUrl
-      });
-      this.posts.push({
-        "name": (await dive)[data].name,
-        "link": (await dive)[data].directUrl
-      });
-      output += `<div class="max-width"> ${(await dive)[data].name} <br> <img src="${(await dive)[data].directUrl}" width="100" height="100" style="width:100%;height:100%;" onclick="onclick_set();"></div>`
-    }
-    this.draw.innerHTML = output
-  }
-}
-
 async function main() {
-  let post = new Post();
-  await post.createPost();
+  try {
+    const POST_API =
+      "https://script.google.com/macros/s/AKfycbxJZbr9ZasslW2vEUw6-WBzWoMse-r25vEYaRF-dT4PjWDmxC55HsSL6kmPiLs6MoBQ/exec";
 
-  console.log(post.posts);
+    const response = await fetch(POST_API, { method: "GET" });
+    const posts = await response.json();
+
+    const post_id = document.getElementById("drawPosts");
+    let item = (name, size, url) => {
+      return `<div class="rigth"><a href="${url}">${name}</a></div>`;
+    };
+
+    let draw_output;
+    for (let i = 0; i < posts.length; i++) {
+      let post = await posts[i];
+      draw_output += `${(await item)(await post.name, await post.size, await post.directUrl)}`;
+      console.log(post);
+    }
+    post_id.innerHTML = await draw_output;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 main();
+
+// {
+//     "name": "IMG_20260501_061404_668.jpg",
+//     "id": "15KRHH34a2rutxfQVp6Zzm4QbvdMG3FwL",
+//     "size": 1571200,
+//     "directUrl": "https://drive.google.com/uc?export=view&id=15KRHH34a2rutxfQVp6Zzm4QbvdMG3FwL"
+// }
