@@ -5,23 +5,50 @@ const POST_ID = document.getElementById("drawPosts");
 async function setResponse(setAPI_URL) {
   return await fetch(setAPI_URL)
     .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
       return response.json();
     })
     .then((data) => {
       let html = "";
+      let number_post = 0;
+      // data.forEach((post) => {
+      // html += `<div class="left"><iframe class="img" src="${post.directUrl}" frameborder="0"></iframe></div>`;
+      // html += `<div class="right">`;
+      // html += `<p class="text">${post.name}</p>`;
+      // html += `<a href="${post.directUrl}" target="_blank">View Image</a>`;
+      // html += `</div>`;
+      // });
+
       data.forEach((post) => {
-        html += `<div class="left"><iframe class="img" src="${post.directUrl}" frameborder="0"></iframe></div>`;
+        number_post++;
+        let rawUrl = post.directUrl;
+        let directImageUrl = rawUrl;
+
+        // ตรวจสอบว่าเป็นลิงก์ Google Drive ทั่วไปหรือไม่ ถ้าใช่ให้ดึง FILE_ID ออกมาแปลง
+        if (rawUrl.includes("drive.google.com")) {
+          const fileIdMatch =
+            rawUrl.match(/\/d\/([^/]+)/) || rawUrl.match(/id=([^&]+)/);
+          if (fileIdMatch && fileIdMatch[1]) {
+            const fileId = fileIdMatch[1];
+            // แปลงเป็น Direct Link ที่แท็ก img สามารถแสดงผลได้
+            directImageUrl = `https://lh3.googleusercontent.com/d/${fileId}`;
+          }
+        }
+        // นำลิงก์ที่แปลงแล้วไปใส่ในแท็ก img
+        html += `<div class="left">`;
+        html += `    <img class="img" src="${directImageUrl}" alt="${post.name}" width="400" height="400">`;
+        html += `</div>`;
         html += `<div class="right">`;
-        html += `<p class="text">${post.name}</p>`;
-        html += `<a href="${post.directUrl}" target="_blank">View Image</a>`;
+        html += `    <div class="text">โพสต์ [${number_post}] : ${post.name}</div>`;
+        html += `    <a href="${rawUrl}" target="_blank">View Image</a>`;
         html += `</div>`;
       });
       return html;
     })
     .catch((err) => {
-      if (err) {
-        console.log(err);
-      }
+      console.error("Error fetching posts:", err);
     });
 }
 
@@ -29,7 +56,7 @@ async function main() {
   try {
     POST_ID.innerHTML = await setResponse(POST_API);
   } catch (error) {
-    console.log(error);
+    console.error("Error fetching posts:", error);
   }
 }
 
